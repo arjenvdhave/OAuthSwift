@@ -131,7 +131,7 @@ public class OAuthSwiftHTTPRequest: NSObject, NSURLSessionDelegate, OAuthSwiftRe
             self.session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
                 delegate: self,
                 delegateQueue: NSOperationQueue.mainQueue())
-            self.task = self.session.dataTaskWithRequest(self.request!) { [unowned self] data, response, error -> Void in
+            self.task = self.session.dataTaskWithRequest(self.request!) { data, response, error -> Void in
                 #if os(iOS)
                     #if !OAUTH_APP_EXTENSIONS
                         UIApplication.sharedApplication().networkActivityIndicatorVisible = false

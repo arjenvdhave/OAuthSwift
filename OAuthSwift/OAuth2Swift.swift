@@ -160,7 +160,7 @@ public class OAuth2Swift: OAuthSwift {
     }
     
     private func requestOAuthAccessTokenWithParameters(parameters: [String : AnyObject], headers: [String: String]? = nil, success: TokenSuccessHandler, failure: FailureHandler?) {
-        let successHandler: OAuthSwiftHTTPRequest.SuccessHandler = { [unowned self]
+        let successHandler: OAuthSwiftHTTPRequest.SuccessHandler = { 
             data, response in
             let responseJSON: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
             
