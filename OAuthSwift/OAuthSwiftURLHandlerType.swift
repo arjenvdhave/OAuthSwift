@@ -97,7 +97,7 @@ import SafariServices
             controller.delegate = self
             
             // present controller in main thread
-            OAuthSwift.main { OAuth2Swift
+            OAuthSwift.main {
                 if let delay = self.delay { // sometimes safari show a blank view..
                     sleep(delay)
                 }
